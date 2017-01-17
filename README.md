@@ -22,7 +22,7 @@ It uses integration tests to make sure API works correctly.
 
 ## Installation:
   ```
-  git clone https://github.com/xpopov/rails5-api-bdd-boilerplate.git .
+  git clone https://github.com/xpopov/rails5-api-bdd-boilerplate.git
   cd rails5-api-bdd-boilerplate
   bundle install
   rails db:setup
