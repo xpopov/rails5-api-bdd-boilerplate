@@ -30,9 +30,13 @@ It uses integration tests to make sure API works correctly.
 
 ## See its working:
   Run tests: rails test
+
   Or start API server
+
     - rails s -b 0.0.0.0 -p 8000
+
     - Access API end-points with 3rd-party http tools
+    
 
 ## Debugging tests:
   ```

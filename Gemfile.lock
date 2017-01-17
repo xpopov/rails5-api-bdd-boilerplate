@@ -146,9 +146,6 @@ GEM
     unf (0.1.4)
       unf_ext
     unf_ext (0.0.7.2)
-    validate_url (1.0.2)
-      activemodel (>= 3.0.0)
-      addressable
     webmock (2.3.2)
       addressable (>= 2.3.6)
       crack (>= 0.3.2)
@@ -175,7 +172,6 @@ DEPENDENCIES
   spring
   spring-watcher-listen (~> 2.0.0)
   tzinfo-data
-  validate_url
   webmock
 
 BUNDLED WITH
