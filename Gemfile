@@ -19,15 +19,23 @@ gem 'puma', '~> 3.0'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
-# Use Capistrano for deployment
-# gem 'capistrano-rails', group: :development
-
 # Use Rack CORS for handling Cross-Origin Resource Sharing (CORS), making cross-origin AJAX possible
-# gem 'rack-cors'
+gem 'rack-cors'
+
+gem 'rest-client'
+
+group :test do
+  gem 'minitest-rails'
+  gem 'minitest-reporters'
+  gem 'webmock'
+end
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri
+  # Remote debug from VSCode or other IDE
+  gem 'ruby-debug-ide', '~> 0.4.32'
+  gem 'debase', '~> 0.2.1'
 end
 
 group :development do

@@ -1,0 +1,1 @@
+rdebug-ide --trace --debug --port 1234 --dispatcher-port 26166 --host 0.0.0.0 -- bin/rails s -b 0.0.0.0 -p 3000 -e development

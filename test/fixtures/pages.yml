@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+dummy:
+  url: http://www.dummy.com
+  title: Just stupid dummy data
+  h1: ["First H1", "Second H1"]
+  h2: ["H2"]
+  h3: []
+  links: ["http://www.test.com"] 

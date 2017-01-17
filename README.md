@@ -1,24 +1,36 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is very basic Rails 5 API app that was written using BDD approach. It is designed to retrieve website's pages by URL and parsing its H* tags, title and links, and saving to database
+It uses integration tests to make sure API works correctly.
 
-Things you may want to cover:
+Requirements:
+  - Rails 5.0+
+  - PostgreSQL
 
-* Ruby version
+Features:
+  - BDD approach
+  - Used PostgreSQL array type (so we can get rid of unnecessary one-to-many tables)
+  - Two end-points: 
+    post /api/pages/store: for grabbing website's pages by URL and parsing its H* tags, title and links, and returning JSON
+    get /api/pages/get: for retrieving previously saved pages
+  - Tests:
+    - Pure Minitest tests
+    - During tests database initialized with prepared fixtures.
+    - WebMock used for stubbing and mocking http requests. 
+    - Result of API calls is tested against with sample data (not loaded in database)
+  - Rake task [b]rails test:dump[/b] for preparing stubbed http requests and sample data (note, these are not fixtures)
 
-* System dependencies
+Installation:
+  git clone https://github.com/xpopov/rails5-api-bdd-boilerplate.git .
+  cd rails5-api-bdd-boilerplate
+  bundle install
+  rails db:setup
 
-* Configuration
+See its working:
+  Run tests: rails test
+  Or start API server
+    - rails s -b 0.0.0.0 -p 8000
+    - Access API end-points with 3rd-party http tools
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Debugging tests:
+  rdebug-ide --trace --debug --port 1234 --dispatcher-port 26166 --host 0.0.0.0 -- bin/rails test
